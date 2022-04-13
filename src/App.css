@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+
+:root {
+  --main: #f01027;
+  --black: #000;
+  --white: #fff;
+  --font-family: "besley", serif;
+}
+
+* {
+  transition: 0.3s;
+  font-family: var(--font-family);
+}
+*::selection {
+  background: var(--main);
+  color: var(--white) !important;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+.btr {
+  width: 300px;
+  border: 2px solid var(--main);
+  background: var(--main) !important;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+.btr:hover {
+  color: var(--white) !important;
+}
+.btr::after {
+  content: "";
+  background: var(--main);
+  display: block;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  width: 0%;
+  top: 0;
+  border-radius: 12;
+  left: 0;
+  transition: 0.3s;
+}
+.btr:hover ::after {
+  width: 100%;
+}
+
+/*NavBar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid var(--white);
+}
+.navbar .active {
+  background: var(--black);
+}
+.navbar-brand {
+  font-size: 3em;
+  color: var(--white) !important;
+  padding: 0px 60px;
+}
+.navbar-brand span {
+  font-size: 1.6em;
+  color: var(--main) !important;
+  font-weight: 600;
+}
+.navbar-nav {
+  padding: 0px 60px;
+  margin-top: 40px;
+}
+.nav-link {
+  color: var(--white) !important;
+  margin-top: 8px;
+}
+.nav-link:hover {
+  color: var(--main) !important ;
+}
+.nav-link::after {
+  content: "";
+  background: var(--main) !important;
+  height: 2px;
+  width: 40px;
+  display: block;
+  position: absolute;
+  transition: 0.3s;
+}
+.nav-link:hover::after {
+  width: 40px;
+}
+/*Header*/
+.header {
+  position: relative;
+}
+.header img {
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+}
+.header .Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--black);
+  opacity: 0.4;
+}
+.header .Content {
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white) !important;
+  background: var(--black);
+  padding: 20px;
+}
+.header .Content h6 {
+  font-size: 50px;
+}
+.header .btr {
+  margin-top: 30px;
+}
+
+/*Custom section*/
+.custom {
+  margin: 200px auto;
+}
+.custom .box {
+  overflow: hidden;
+}
+.custom .img {
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+}
+.custom .img:hover {
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*Details section start*/
+.details {
+  margin-bottom: 200px;
+}
+.details .col-sm-5 h6 {
+  font-size: 70px;
+  font-weight: 600;
+  margin: 20px auto;
+}
+.details .col-sm-5 p {
+  margin: 35px auto;
+}
+/*Details section end*/
+
+/*Teams section start*/
+.teams {
+  margin-bottom: 200px;
+}
+.teams .col-sm-4 {
+  overflow: hidden;
+  position: relative;
+}
+.teams img {
+  height: 550px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+}
+.teams img:hover {
+  -o-transform: scale(1.01);
+  transform: scale(1.01);
+}
+.teams .Content {
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white) !important;
+  width: 95%;
+  background: var(--black);
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+}
+.teams .col-sm-4:hover .Content {
+  opacity: 1;
+}
+.teams .Content h6 {
+  font-size: 40px;
+  font-weight: 600;
+}
+/*Teams section end*/
+
+/*Pricing section start*/
+.pricing {
+  margin-bottom: 200px;
+}
+.pricing .box {
+  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.4),
+    inset 10px 10px 10px -10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.pricing .box:hover, .pricing.box.active{
+  background: var(--black);
+  color: var(--white) !important;
+}
+.pricing .row{
+ margin: 100 auto; 
+}
+.pricing .active{
+  margin-top: 100px;
+}
+.pricing .box h6{
+  font-size: 40px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+.pricing .box h5{
+  font-size: 100px;
+  margin: 20px auto;
+  font-weight: 600;
+}
+.pricing .box p{
+ font-size: 12px; 
+ margin: 15px auto;
+}
+/*Pricing section end*/
+
+/*Footer*/
+footer{
+  background: var(--black);
+  padding: 20px;
+}
+footer .container{
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--white);
+}
+footer .container h6{
+  font-weight: 600;
+  font-size: 40px;
+  margin: 20px auto;
+}
+footer .container i{
+  display: block;
+  margin: 10px auto;
+  padding-right: 20px ;
+}
+footer .container  a{
+  color: var(--white) !important;
+  text-decoration: none !important;
+  padding-left: 20px;
+}
+footer .container i a:hover{
+  color: var(--main) !important;
+  padding-left: 25px;
+  font-weight: 500;
+}
